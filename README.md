@@ -14,11 +14,27 @@ The ideal solution would be have the lyrics while I play - but there is nothing 
 Therefore, the solution I am going for is hanging the lyrics open on a tabet attached to the wall which I can quicky look at. This program is for this. It creates an html page.
 
 ## Installation
-You can install yt-parallel using [pipx](https://github.com/pypa/pipx):
+You can install `yt-parallel` using [pipx](https://github.com/pypa/pipx):
+```
+pipx install yt-parallel
+```
 
+You also must install `yt-dlp` with pipx and `espeak` (you can install this with apt on linux)
 
+## Usage
+This tool wraps `yt-dlp` which often needs cookies a browser which has logged into youtube to wor. If you use chrome you need only log into youtube in this browser. For other browsers you can use the `YT_PARALLEL_COOKIES` variable set the `--cookies-from-browser` [option in yt-dlp](https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp).
+
+You can then run:
+
+```
+yt-parallel 'https://www.youtube.com/watch?v=MhghQ3AFCe0' da en
+```
+
+If you are learning danish in english.
 
 ## Alternatives and prior work
+This tool uses yt-dlp and espeak.
+
 There are many commercial interactive tools which provide similar features and allow you to listen to music or watch films while seeing lyrics in two languages. Language reactor is one such example and works with youtube.
 
 [opus](https://opus.nlpl.eu/) provide parallel corpora of sentence pairs (which incidentally can be rebuilt into copmlete parallel corpora for movies).
