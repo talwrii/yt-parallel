@@ -6,13 +6,13 @@ build-backend = "setuptools.build_meta"
 [project]
 # --- Project Metadata ---
 name = "yt-parallel"
-version = "1.0.0"
+version = "1.0.1"
 description = "Downloads and processes parallel YouTube subtitles with eSpeak IPA generation."
 readme = "README.md" # Assuming you'll write a README
 authors = [
-    {name = "Your Name", email = "your.email@example.com"} # IMPORTANT: Replace with your details
+    {name = "@readwithai", email = "talwrii@gmail.com"} # IMPORTANT: Replace with your details
 ]
-license = {file = "LICENSE"} # Assuming you'll choose a license
+license = {file = "MIT"} # Assuming you'll choose a license
 
 # List Python dependencies.
 dependencies = [
@@ -20,7 +20,7 @@ dependencies = [
 ]
 
 # Optional: Define your project's homepage, repository, etc.
-urls = { "Homepage" = "https://example.com/yt-parallel", "Repository" = "https://github.com/yourusername/yt-parallel"}
+urls = { "Homepage" = "https://github.com/talwrii/yt-parallel", "Repository" = "https://github.com/talwrii/yt-parallel"}
 
 # Define classifiers (standard tags for PyPI) <-- CORRECT LOCATION
 classifiers = [
