@@ -13,6 +13,11 @@ The ideal solution would be have the lyrics while I play - but there is nothing 
 
 Therefore, the solution I am going for is hanging the lyrics open on a tabet attached to the wall which I can quicky look at. This program is for this. It creates an html page.
 
+## Installation
+You can install yt-parallel using [pipx](https://github.com/pypa/pipx):
+
+
+
 ## Alternatives and prior work
 There are many commercial interactive tools which provide similar features and allow you to listen to music or watch films while seeing lyrics in two languages. Language reactor is one such example and works with youtube.
 
