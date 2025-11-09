@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 [project]
 # --- Project Metadata ---
 name = "yt-parallel"
-version = "0.1.0"
+version = "1.0.0"
 description = "Downloads and processes parallel YouTube subtitles with eSpeak IPA generation."
 readme = "README.md" # Assuming you'll write a README
 authors = [

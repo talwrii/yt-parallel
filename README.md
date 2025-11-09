@@ -4,7 +4,7 @@
 
 Create parallel lyrics in two languages for a song downloaded from youtube using their autotranslated lyrics.
 
-This is related to the idea of [parallel corpora](https://en.wikipedia.org/wiki/Parallel_text) for language learning.
+This is related to the idea of [parallel corpora](https://en.wikipedia.org/wiki/Parallel_text) for language learning. You likely adapt this tool to your use cases - such as burning text into youtube videos.
 
 ## Motivation
 I want to exercise a lot, but it frequently feels kind of pointless. I am trying to learn
