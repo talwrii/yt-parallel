@@ -22,7 +22,7 @@ pipx install yt-parallel
 You also must install `yt-dlp` with pipx and `espeak` (you can install this with apt on linux)
 
 ## Usage
-This tool wraps `yt-dlp` which often needs cookies a browser which has logged into youtube to wor. If you use chrome you need only log into youtube in this browser. For other browsers you can use the `YT_PARALLEL_COOKIES` variable set the `--cookies-from-browser` [option in yt-dlp](https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp).
+This tool wraps `yt-dlp` which often needs cookies a browser which has logged into youtube to wor. If you use chrome you need only log into youtube in this browser. For other browsers you can use the `YT_PARALLEL_COOKIES` variable set the `--cookies-from-browser` [option in yt-dlp](https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp). Remember to add the browser type like `chromium:` to this string.
 
 You can then run:
 
@@ -31,6 +31,17 @@ yt-parallel 'https://www.youtube.com/watch?v=MhghQ3AFCe0' da en
 ```
 
 If you are learning danish in english.
+
+
+## Troubleshooting
+Errors related to `Too Many Requests` can occur if you are not logged into youtube.
+Ensure you are logged in in a browser and try changing `YT_PARALLEL_COOKIES`. You likely want to try getting `yt-dlp` working directly.
+
+If this is still a problem you might like to change the `--impersonate` setting.
+
+```
+ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests
+```
 
 ## Alternatives and prior work
 This tool uses yt-dlp and espeak.
