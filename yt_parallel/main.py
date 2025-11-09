@@ -17,11 +17,11 @@ import subprocess
 import tempfile
 import atexit
 
-CUSTOM_CHROMIUM_PATH = os.path.expanduser("~/snap/chromium/common/chromium/Default")
-
+# Global variables for temporary directory and files
 TEMP_DIR = None
 TEMP_FILES = []
 
+# --- Temporary File Cleanup (Ensures files are deleted on script exit) ---
 @atexit.register
 def cleanup_temp_files():
     """Removes all files created in the temporary directory."""
@@ -36,12 +36,10 @@ def cleanup_temp_files():
     except:
         pass
 
+# --- eSpeak IPA Generation Function ---
 def generate_ipa(text, lang_code):
     """
     Generates IPA for the given text using the espeak command-line tool.
-    
-    NOTE: eSpeak must support the specified language code. For example, 
-    if L1 is 'fr', you must have the French voice installed in eSpeak.
     """
     if not text:
         return ""
@@ -83,11 +81,14 @@ def download_subtitles(url, temp_dir, lang_codes):
     sub_format = 'vtt'
 
     output_template = os.path.join(temp_dir, 'temp.%(ext)s')
+    
+    # Get cookie source from environment variable, defaulting to 'chrome'
+    cookies_source = os.environ.get('YT_PARALLEL_COOKIES', 'chrome')
 
     command = [
         'yt-dlp',
         url,
-        '--cookies-from-browser', f'chromium:{CUSTOM_CHROMIUM_PATH}',
+        '--cookies-from-browser', cookies_source,
         '--write-sub',
         '--write-auto-sub',
         '--sub-langs', sub_langs_arg,
